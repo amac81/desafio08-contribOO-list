@@ -25,14 +25,15 @@ public class Program {
 		// variaveis
 		int nContribuintes = 0, contrib = 0;
 		
-		nContribuintes = Ui.askAndValidateIntInput("\nQuantos turnos você deseja executar? ", sc, 1);
+		nContribuintes = Ui.askAndValidateIntInput("\nQuantos contribuintes você vai digitar? ", sc, 1);
 		
-		//torneio
 		do {
+
+			System.out.println("Digite os dados do " + contrib + " contribuinte: ");
+			
+			
+			
 			contrib ++;
-			
-			System.out.println("Teste");			
-			
 		} while(contrib < nContribuintes); 
 		
 		sc.close();

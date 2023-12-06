@@ -13,7 +13,8 @@ public class Ui {
 	 * pede ao utilizador um número, valida-o e retorna-o
 	 * 
 	 * @param askMessage - String com o texto a apresentar ao utilizador
-	 * @param scanner - objeto Scanner para entrada de dados, a partir de System.in 
+	 * @param scanner - objeto Scanner para entrada de dados, a partir de System.in
+	 * @param minValue - valor inteiro minimo necessario para input
 	 * @return número inteiro
 	 */
 	public static int askAndValidateIntInput(String askMessage, Scanner scanner, int minValue) {
