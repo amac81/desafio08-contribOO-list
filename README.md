@@ -13,8 +13,6 @@ Projeto desenvolvido no curso Java e Programação Orientada a Objetos Expert - 
 # Tecnologias usadas
 - Java
 
-```
-
 # Autor
 
 Arnaldo Manuel de Almeida Canelas
