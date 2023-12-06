@@ -16,7 +16,7 @@ public class Ui {
 	 * @param scanner - objeto Scanner para entrada de dados, a partir de System.in 
 	 * @return número inteiro
 	 */
-	public static int askAndValidateIntInput(String askMessage, Scanner scanner) {
+	public static int askAndValidateIntInput(String askMessage, Scanner scanner, int minValue) {
 		int value = 0;
 		boolean askAgain = true;
 		
@@ -26,8 +26,8 @@ public class Ui {
 			if (scanner.hasNextInt()) 
 			{
 				value = scanner.nextInt();
-				if(value < 1) {
-					System.out.println("Introduza um número >= 1.");
+				if(value < minValue) {
+					System.out.println("Introduza um número >= " + minValue + ".");
 					askAgain = true;
 				}
 				else {

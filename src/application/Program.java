@@ -25,7 +25,7 @@ public class Program {
 		// variaveis
 		int nContribuintes = 0, contrib = 0;
 		
-		nContribuintes = Ui.askAndValidateIntInput("\nQuantos turnos você deseja executar? ", sc);
+		nContribuintes = Ui.askAndValidateIntInput("\nQuantos turnos você deseja executar? ", sc, 1);
 		
 		//torneio
 		do {
