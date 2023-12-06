@@ -81,8 +81,13 @@ public class TaxPayer {
 	public double netTax() {
 		return 0.0;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "TaxPayer [salaryIncome=" + salaryIncome + ", servicesIncome=" + servicesIncome + ", capitalIncome="
+				+ capitalIncome + ", healthSpending=" + healthSpending + ", educationSpending=" + educationSpending
+				+ "]";
+	}
 	
 
 }

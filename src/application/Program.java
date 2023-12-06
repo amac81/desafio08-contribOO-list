@@ -9,9 +9,12 @@
 
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.TaxPayer;
 import utils.Ui;
 
 public class Program {
@@ -25,24 +28,33 @@ public class Program {
 		// variaveis
 		int nContribuintes = 0, contrib = 0;
 		
+		// lista de contribuintes
+		List <TaxPayer> taxPayers = new ArrayList<TaxPayer> (); 
+		
 		nContribuintes = Ui.askAndValidateIntInput("Quantos contribuintes você vai digitar? ", sc, 1);
 		System.out.println();
 		
 		do {
 
 			//variaveis
-			double rendaAnualSalario = 0.0;
-			double rendaAnualPrestServicos = 0.0;
-			double rendaAnualCapital = 0.0;
-			double gastosMedicos = 0.0;
-			double gastosEducacao = 0.0;
+			double salaryIncome = 0.0;
+			double servicesIncome = 0.0;
+			double capitalIncome = 0.0;
+			double healthSpending = 0.0;
+			double educationSpending = 0.0;
 			
 			System.out.println("Digite os dados do " + (contrib+1) + "o contribuinte: ");
-			rendaAnualSalario = Ui.askAndValidateDoubleInput("Renda anual com salário: ", sc);
-			rendaAnualPrestServicos = Ui.askAndValidateDoubleInput("Renda anual com prestação de serviço: ", sc);
-			gastosMedicos = Ui.askAndValidateDoubleInput("Gastos médicos: ", sc);
-			gastosEducacao = Ui.askAndValidateDoubleInput("Gastos educacionais: ", sc);
+			salaryIncome = Ui.askAndValidateDoubleInput("Renda anual com salário: ", sc);
+			servicesIncome = Ui.askAndValidateDoubleInput("Renda anual com prestação de serviço: ", sc);
+			capitalIncome = Ui.askAndValidateDoubleInput("Renda anual com ganho de capital: ", sc);
+			healthSpending = Ui.askAndValidateDoubleInput("Gastos médicos: ", sc);
+			educationSpending = Ui.askAndValidateDoubleInput("Gastos educacionais: ", sc);
 			
+			// instanciacao de TaxPayer com os dados introduzidos pelo utilizador
+			TaxPayer taxPayer = new TaxPayer(salaryIncome, servicesIncome, capitalIncome, healthSpending, educationSpending);
+			
+			//Teste de output
+			System.out.println(taxPayer);
 			
 			
 			contrib ++;
