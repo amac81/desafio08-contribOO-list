@@ -70,6 +70,7 @@ public class Program {
 			System.out.println("Resumo do " + i + "o contribuinte: ");
 			
 			System.out.printf("Imposto bruto total: %.2f%n", t.grossTax());
+			System.out.printf("Abatimento: %.2f%n", t.taxRebate());
 			
 			
 			i++;

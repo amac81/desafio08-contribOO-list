@@ -92,8 +92,17 @@ public class TaxPayer {
 		return salaryTax() + servicesTax() + capitalTax();
 	}
 	
+	//abatimento de imposto
 	public double taxRebate() {
-		return 0.0;
+		double maxDeductible = grossTax() * 0.30;
+		
+		//gastos dedutiveis
+		double deductibleExpenses = healthSpending + educationSpending;
+		double rebate = 0.0;
+		
+		rebate = (deductibleExpenses > maxDeductible) ? maxDeductible : deductibleExpenses;
+		
+		return rebate;
 	}
 	
 	public double netTax() {
