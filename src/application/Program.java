@@ -66,11 +66,10 @@ public class Program {
 		// Apresentacao dos resumos
 		int i = 1;
 		for(TaxPayer t : taxPayers) {
-			if(i>1)
-				System.out.println();
+			System.out.println();
 			System.out.println("Resumo do " + i + "o contribuinte: ");
 			
-			System.out.println(t.salaryTax());
+			System.out.printf("Imposto bruto total: %.2f%n", t.grossTax());
 			
 			
 			i++;

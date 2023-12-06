@@ -77,16 +77,19 @@ public class TaxPayer {
 		return salaryTaxValue;
 	}
 	
+	//imposto sob o prestacao de servicos
 	public double servicesTax() {
-		return 0.0;
+		return servicesIncome * 0.15; //15%;
 	}
 	
+	//imposto sob o ganho de capital
 	public double capitalTax() {
-		return 0.0;
+		return capitalIncome * 0.20; //20% 	;
 	}
 	
+	//imposto bruto
 	public double grossTax() {
-		return 0.0;
+		return salaryTax() + servicesTax() + capitalTax();
 	}
 	
 	public double taxRebate() {
