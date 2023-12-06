@@ -58,8 +58,23 @@ public class TaxPayer {
 		this.educationSpending = educationSpending;
 	}
 	
+	//imposto sob o salario
 	public double salaryTax() {
-		return 0.0;
+				
+		double monthlySalary = salaryIncome/12;
+		double salaryTaxValue = 0.0;
+		
+		if(monthlySalary <  3000.0) {
+			salaryTaxValue = 0.0; //isento 	
+		}
+		else if(monthlySalary >= 3000.0 && monthlySalary <=  5000.0) {
+			salaryTaxValue = salaryIncome * 0.10; //10% 	
+		}
+		else {
+			salaryTaxValue = salaryIncome * 0.20; //20%
+		}
+		
+		return salaryTaxValue;
 	}
 	
 	public double servicesTax() {

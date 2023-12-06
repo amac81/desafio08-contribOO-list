@@ -63,9 +63,17 @@ public class Program {
 			
 		} while(contrib < nContribuintes);
 		
-		
+		// Apresentacao dos resumos
+		int i = 1;
 		for(TaxPayer t : taxPayers) {
-			System.out.println(t);			
+			if(i>1)
+				System.out.println();
+			System.out.println("Resumo do " + i + "o contribuinte: ");
+			
+			System.out.println(t.salaryTax());
+			
+			
+			i++;
 		}
 		
 		sc.close();
