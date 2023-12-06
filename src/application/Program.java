@@ -1,6 +1,6 @@
 /**
 * Este programa le os dados de N contribuintes, armazenando-os numa lista. 
-* Mostra no final, um resumo do imposto apurado
+* Mostra no final, um resumo do imposto apurado.
 * 
 * @author  Arnaldo Canelas
 * @version 1.0
