@@ -50,15 +50,23 @@ public class Program {
 			healthSpending = Ui.askAndValidateDoubleInput("Gastos médicos: ", sc);
 			educationSpending = Ui.askAndValidateDoubleInput("Gastos educacionais: ", sc);
 			
-			// instanciacao de TaxPayer com os dados introduzidos pelo utilizador
+			// Instanciacao de TaxPayer com os dados introduzidos pelo utilizador
 			TaxPayer taxPayer = new TaxPayer(salaryIncome, servicesIncome, capitalIncome, healthSpending, educationSpending);
 			
-			//Teste de output
-			System.out.println(taxPayer);
-			
+			// Adicionar na lista taxPayers
+			taxPayers.add(taxPayer);			
 			
 			contrib ++;
-		} while(contrib < nContribuintes); 
+			
+			if(nContribuintes>1)
+				System.out.println();
+			
+		} while(contrib < nContribuintes);
+		
+		
+		for(TaxPayer t : taxPayers) {
+			System.out.println(t);			
+		}
 		
 		sc.close();
 	}
