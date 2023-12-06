@@ -98,15 +98,13 @@ public class TaxPayer {
 		
 		//gastos dedutiveis
 		double deductibleExpenses = healthSpending + educationSpending;
-		double rebate = 0.0;
-		
-		rebate = (deductibleExpenses > maxDeductible) ? maxDeductible : deductibleExpenses;
-		
-		return rebate;
+
+		return (deductibleExpenses > maxDeductible) ? maxDeductible : deductibleExpenses;
 	}
 	
+	//imposto a pagar
 	public double netTax() {
-		return 0.0;
+		return grossTax() - taxRebate() ;
 	}
 
 	@Override

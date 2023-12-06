@@ -71,7 +71,7 @@ public class Program {
 			
 			System.out.printf("Imposto bruto total: %.2f%n", t.grossTax());
 			System.out.printf("Abatimento: %.2f%n", t.taxRebate());
-			
+			System.out.printf("Imposto devido: %.2f%n", t.netTax());
 			
 			i++;
 		}
