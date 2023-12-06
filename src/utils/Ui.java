@@ -45,5 +45,37 @@ public class Ui {
 		
 		return value;
 	}
+	
+	/**
+	 * pede ao utilizador um número, valida-o e retorna-o
+	 * 
+	 * @param askMessage - String com o texto a apresentar ao utilizador
+	 * @param scanner - objeto Scanner para entrada de dados, a partir de System.in
+	 * @return numero decimal
+	 */
+	public static double askAndValidateDoubleInput(String askMessage, Scanner scanner) {
+		double value = 0;
+		boolean askAgain = true;
+		
+		System.out.print(askMessage);
+		while(askAgain) 
+		{
+			if (scanner.hasNextDouble()) 
+			{
+				value = scanner.nextDouble();
+				askAgain = false;
+				break;				
+			} 
+			else {
+				System.out.println("Número inválido! Introduza novamente.");
+				scanner.next();
+				askAgain = true;
+			}
+		}
+		
+		return value;
+	}
+	
+	
 
 }

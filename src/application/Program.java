@@ -25,11 +25,23 @@ public class Program {
 		// variaveis
 		int nContribuintes = 0, contrib = 0;
 		
-		nContribuintes = Ui.askAndValidateIntInput("\nQuantos contribuintes você vai digitar? ", sc, 1);
+		nContribuintes = Ui.askAndValidateIntInput("Quantos contribuintes você vai digitar? ", sc, 1);
+		System.out.println();
 		
 		do {
 
-			System.out.println("Digite os dados do " + contrib + " contribuinte: ");
+			//variaveis
+			double rendaAnualSalario = 0.0;
+			double rendaAnualPrestServicos = 0.0;
+			double rendaAnualCapital = 0.0;
+			double gastosMedicos = 0.0;
+			double gastosEducacao = 0.0;
+			
+			System.out.println("Digite os dados do " + (contrib+1) + "o contribuinte: ");
+			rendaAnualSalario = Ui.askAndValidateDoubleInput("Renda anual com salário: ", sc);
+			rendaAnualPrestServicos = Ui.askAndValidateDoubleInput("Renda anual com prestação de serviço: ", sc);
+			gastosMedicos = Ui.askAndValidateDoubleInput("Gastos médicos: ", sc);
+			gastosEducacao = Ui.askAndValidateDoubleInput("Gastos educacionais: ", sc);
 			
 			
 			
